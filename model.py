@@ -114,6 +114,7 @@ class RN(BasicModel):
         np_coord_tensor = np.zeros((args.batch_size, 25, 2))
         for i in range(25):
             np_coord_tensor[:,i,:] = np.array( cvt_coord(i) )
+            ### [-1,-1],[-0.9,-0.5],[-0.8,0],...[1.4,1]
         self.coord_tensor.data.copy_(torch.from_numpy(np_coord_tensor))
 
 
